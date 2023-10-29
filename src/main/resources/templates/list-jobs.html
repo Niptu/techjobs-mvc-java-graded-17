@@ -12,6 +12,8 @@
 
   <!-- TODO #1 - Use a loop to display job results in a table. -->
 // create structure. define the headers of the table columns inside the tr tags under thead
+  // th:each iterates over list of jobs stored in jobs from controller.
+
   <table class="table job-listing">
     <thead>
     <tr>
@@ -25,7 +27,7 @@
     </thead>
 
     <tbody>
-    <tr th:each="job : ${jobs}">     //th:each iterates over list of jobs stored in jobs from controller.
+    <tr th:each="job : ${jobs}">
       <td th:text="${job.id}"></td>
       <td th:text="${job.name}"></td>
       <td th:text="${job.employer.value}"></td>
