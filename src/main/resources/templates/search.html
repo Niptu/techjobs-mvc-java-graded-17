@@ -37,28 +37,54 @@
   <hr />
 
   <!-- TODO #4 - Loop over the search results to display all job fields. -->
-    <table class="job-listing">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Employer</th>
-            <th>Location</th>
-            <th>Position Type</th>
-            <th>Core Competency</th>
-        </tr>
-        </thead>
 
-        <tbody>
-        <tr th:each="job : ${jobs}">
-            <td th:text="${job.id}"> ID not available </td>
-            <td th:text="${job.name}"> Name not available </td>
-            <td th:text="${job.employer.value}"> Employer not available </td>
-            <td th:text="${job.location.value}"> Location not available </td>
-            <td th:text="${job.positionType.value}"> Position type not available </td>
-            <td th:text="${job.coreCompetency.value}"> Core competency not available </td>
-        </tr>
-        </tbody>
+    <table th:replace="list-jobs :: job-tables">
+<!--        <tr>-->
+<!--            <td>ID</td>-->
+<!--            <td th:text="${job.id}"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Name</td>-->
+<!--            <td th:text="${job.name}"> </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Employer</td>-->
+<!--            <td th:text="${job.employer}"> </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Location</td>-->
+<!--            <td th:text="${job.location}"></td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Position Type</td>-->
+<!--            <td th:text="${job.positionType}"> </td>-->
+<!--        </tr>-->
+<!--        <tr>-->
+<!--            <td>Core Competency</td>-->
+<!--            <td th:text="${job.coreCompetency}"></td>-->
+<!--        </tr>-->
+<!--    <table class="job-listing">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th>ID</th>-->
+<!--            <th>Name</th>-->
+<!--            <th>Employer</th>-->
+<!--            <th>Location</th>-->
+<!--            <th>Position Type</th>-->
+<!--            <th>Core Competency</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+
+<!--        <tbody>-->
+<!--        <tr th:each="job : ${jobs}">-->
+<!--            <td th:text="${job.id}"> ID not available </td>-->
+<!--            <td th:text="${job.name}"> Name not available </td>-->
+<!--            <td th:text="${job.employer.value}"> Employer not available </td>-->
+<!--            <td th:text="${job.location.value}"> Location not available </td>-->
+<!--            <td th:text="${job.positionType.value}"> Position type not available </td>-->
+<!--            <td th:text="${job.coreCompetency.value}"> Core competency not available </td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
     </table>
 
 </div>
